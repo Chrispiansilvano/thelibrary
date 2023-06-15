@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="<?php echo base_url("css/index.css") ?>" href="<?php echo date('l jS \of F Y h:i:s A'); ?>">
     <link rel="stylesheet" type="text/css" href="/css/index.css?<?php echo date('l jS \of F Y h:i:s A'); ?>" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta charset="utf-8">
     <title>The Library App</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -221,39 +222,39 @@
                         <span>Science and research</span>
                     </div>
                     <div class="category-item">
-                        <img src="<?php echo base_url('images/tech.jpg'); ?>" alt="Category 3">
+                        <img src="<?php echo base_url('images/pl.jpg'); ?>" alt="Category 3">
                         <span>Politics and Law</span>
                     </div>
                     <div class="category-item">
-                        <img src="<?php echo base_url('images/tech.jpg'); ?>" alt="Category 3">
-                        <span>Politics and Law</span>
+                        <img src="<?php echo base_url('images/ac.jpg'); ?>" alt="Category 3">
+                        <span>Academic and Education</span>
                     </div>
                     <div class="category-item">
-                        <img src="<?php echo base_url('images/tech.jpg'); ?>" alt="Category 3">
-                        <span>Politics and Law</span>
+                        <img src="<?php echo base_url('images/fl.jpg'); ?>" alt="Category 3">
+                        <span>Fiction and literature</span>
                     </div>
 
                 </div>
                 <div class="category-container">
                     <div class="category-item">
-                        <img src="<?php echo base_url('images/tech.jpg'); ?>" alt="Category 3">
+                        <img src="<?php echo base_url('images/env.jpg'); ?>" alt="Category 3">
                         <span>Enviroment</span>
                     </div>
                     <div class="category-item">
-                        <img src="<?php echo base_url('images/tech.jpg'); ?>" alt="Category 3">
+                        <img src="<?php echo base_url('images/bc.jpg'); ?>" alt="Category 3">
                         <span>business and carrier</span>
                     </div>
                     <div class="category-item">
-                        <img src="<?php echo base_url('images/tech.jpg'); ?>" alt="Category 3">
+                        <img src="<?php echo base_url('images/ls.jpg'); ?>" alt="Category 3">
                         <span>lifestyle</span>
                     </div>
                     <div class="category-item">
-                        <img src="<?php echo base_url('images/tech.jpg'); ?>" alt="Category 3">
+                        <img src="<?php echo base_url('images/art.jpg'); ?>" alt="Category 3">
                         <span>Art</span>
                     </div>
                 </div>
-                 
-                
+
+
 
                 <style>
                     div.gallery {
@@ -262,6 +263,8 @@
                         float: left;
                         width: 180px;
                         margin-left: 40px;
+                        border-radius: 4px;
+                        height: 300px;
                     }
 
                     div.gallery:hover {
@@ -270,22 +273,34 @@
 
                     div.gallery img {
                         width: 100%;
-                        height: 200px;
+                        height: 150px;
                     }
 
                     div.desc {
-                        padding: 15px;
+                        padding: 10px;
                         text-align: center;
+                    }
+
+                    .right-arrow {
+                        margin-left: 30px;
+                        font-size: 24px;
+
+                    }
+
+                    .tech {
+                        align-items: center;
+                        display: flex;
                     }
                 </style>
                 <hr>
 
-                <div class="category-item">
-                        <img src="<?php echo base_url('images/tech.jpg'); ?>" alt="Category 1">
-                        <span style="font-size: 25px;">Technology and computing</span>
-                    </div>
+                <div class="category-item" style="margin-top: 30px;">
+                    <img src="<?php echo base_url('images/tech.jpg'); ?>" alt="Category 1">
+                    <span style="font-size: 25px;">Technology and computing</span>
+                </div>
 
-            
+                <div class="tech">
+
 
                     <div class="gallery">
                         <a target="_blank" href="<?php echo base_url('images/book1.jpg'); ?>">
@@ -296,30 +311,73 @@
                     </div>
 
                     <div class="gallery">
-                        <a target="_blank" href="<?php echo base_url('images/book1.jpg'); ?>">
+                        <a target="_blank" href="<?php echo base_url('images/book2.jpg'); ?>">
                             <img src="<?php echo base_url('images/book2.jpg'); ?>" alt="data structure and algo" width="600" height="400">
                         </a>
-                        <div class="desc">INTRODUCTION TO ALGORITHMS</div>
-                        <div class="desc">Thomas H. cormen</div>
+                        <div class="desc">DATABASE design, application, development & administration</div>
+                        <div class="desc">Michael Mannino</div>
                     </div>
 
                     <div class="gallery">
-                        <a target="_blank" href="<?php echo base_url('images/book1.jpg'); ?>">
+                        <a target="_blank" href="<?php echo base_url('images/book3.jpg'); ?>">
                             <img src="<?php echo base_url('images/book3.jpg'); ?>" alt="data structure and algo" width="600" height="400">
                         </a>
-                        <div class="desc">INTRODUCTION TO ALGORITHMS</div>
-                        <div class="desc">Thomas H. cormen</div>
+                        <div class="desc">PHP COOKBOOK</div>
+                        <div class="desc">David sklar, Adena Tranchberg</div>
                     </div>
 
                     <div class="gallery">
-                        <a target="_blank" href="<?php echo base_url('images/book1.jpg'); ?>">
+                        <a target="_blank" href="<?php echo base_url('images/book4.jpg'); ?>">
                             <img src="<?php echo base_url('images/book4.jpg'); ?>" alt="data structure and algo" width="600" height="400">
                         </a>
-                        <div class="desc">INTRODUCTION TO ALGORITHMS</div>
-                        <div class="desc">Thomas H. cormen</div>
+                        <div class="desc">PRINCIPLES OF SECURITY</div>
+                        <div class="desc">Vincent Nestler</div>
+                    </div>
+                    <div class="right-arrow"><i class="fas fa-arrow-right"></i></div>
+
+                </div>
+                <hr>
+                <div class="category-item" style="margin-top: 30px;">
+                    <img src="<?php echo base_url('images/sci.jfif'); ?>" alt="Category 2">
+                    <span style="font-size: 25px;">Science and research</span>
+                </div>
+                <div class="tech">
+
+
+                    <div class="gallery">
+                        <a target="_blank" href="<?php echo base_url('images/book5.jpg'); ?>">
+                            <img src="<?php echo base_url('images/book5.jpg'); ?>" alt="data structure and algo" width="600" height="400">
+                        </a>
+                        <div class="desc">A BRIEF HISTORY OF TIME</div>
+                        <div class="desc">Stephen Hawking</div>
                     </div>
 
+                    <div class="gallery">
+                        <a target="_blank" href="<?php echo base_url('images/book6.jpg'); ?>">
+                            <img src="<?php echo base_url('images/book6.jpg'); ?>" alt="data structure and algo" width="600" height="400">
+                        </a>
+                        <div class="desc">ESSENTIALS OF INORGANIC CHEMISTRY</div>
+                        <div class="desc">Katja A. Strohfeldt</div>
+                    </div>
 
+                    <div class="gallery">
+                        <a target="_blank" href="<?php echo base_url('images/book7.jpg'); ?>">
+                            <img src="<?php echo base_url('images/book7.jpg'); ?>" alt="ESSENTIALS OF ANATOMY AND PHSYIOLOGY" width="600" height="400">
+                        </a>
+                        <div class="desc">ESSENTIALS OF ANATOMY AND PHSYIOLOGY</div>
+                        <div class="desc">Valerie C.Scanlon, Tine Sanders</div>
+                    </div>
+
+                    <div class="gallery">
+                        <a target="_blank" href="<?php echo base_url('images/book8.jpg'); ?>">
+                            <img src="<?php echo base_url('images/book8.jpg'); ?>" alt="data structure and algo" width="600" height="400">
+                        </a>
+                        <div class="desc">ENCYCLOPEDIA OF BIOLOGY</div>
+                        <div class="desc">Don Ritner & Timothy L McCabe P.H.D</div>
+                    </div>
+                    <div class="right-arrow"><i class="fas fa-arrow-right"></i></div>
+
+                </div>
             </div>
         </div>
         <div class="search" id="search">
