@@ -1,0 +1,240 @@
+
+/* the primary colors: dark blue -  #002c5f */
+/* secondary colors:  */
+
+body {
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+.top-bar {
+    background-color:  #002c5f;
+    padding: 10px;
+    /* display: flex; */
+    justify-content: space-between;
+    /* align-items: center; */
+    color: #fff;
+}
+
+.logo {
+    margin-left: 20px;
+
+}
+.toptext{
+    float: right;
+}
+/* creating two equal column that floats next to each other (navigation and contents)*/
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    background-color: #002c5f;
+    float: left;
+    display: flex; 
+    flex-direction: column;
+    font-size: 20px;
+}
+
+li a {
+    display: block;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    /* margin-top: 5px; */
+    margin-bottom: 20px;
+    
+}
+
+li {
+    text-align: center;
+   
+    
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li a.active {
+    background-color: #005c5f;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #005c5f;
+    color: white;
+}
+.home {
+    padding: 5px;
+    /* background-color: red; */
+    width: 70%;
+    float: left;
+    margin-left: 10px;
+    /* margin-top: 10px; */
+}
+
+/* Style the search box inside the navigation bar */
+.home input[type=text] {
+    /* float: right; */
+    padding: 9px;
+    border: 1px solid black;
+    /* margin-top: 8px; */
+    /* margin-right: 16px; */
+    font-size: 17px;
+    width: 85%;
+    border-radius: 2%;
+  }
+  .home input[type=button] {
+    /* float: right; */
+    padding: 9px;
+    border: 1px solid black;
+    /* margin-top: 8px; */
+    /* margin-right: 16px; */
+    font-size: 17px;
+    width: 10%;
+    border-radius: 5%;
+    color:  white;
+    background-color:  #002c5f;
+    
+    
+  }
+  
+/* Change the color of links on hover */
+.home input[type=button]:hover {
+    background-color: #005c5f;
+    
+  }
+
+.footer {
+    background-color:  #002c5f;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    display: grid;
+}
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.material-icons.md-18{
+    font-size: 18px;
+}
+
+.searchspace {
+    background-color: blue;
+    height: 100px;
+    margin-top: 20px;
+
+}
+
+.categoriesdialog{
+    /* background-color: yellow; */
+    /* display: grid; */
+    margin-left: 14px;
+    width: 100%;
+    float: left;
+}
+
+.categoriesdialog h1{
+    font-size: 25px;
+    display: none;
+}
+.category-container {
+    display: flex;
+    margin-bottom: 20px;
+  }
+.category-item {
+    display: flex;
+      align-items: center;
+      margin-right: 20px;
+      /* background-color: red; */
+      width: 100%;
+  }
+
+  .category-item img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .start {
+    padding: 5px;
+    /* background-color: red; */
+    width: 70%;
+    float: left;
+    margin-left: 10px;
+    /* margin-top: 10px; */
+}
+.search{
+    display: none;
+    padding: 5px;
+    /* background-color: red; */
+    width: 70%;
+    float: left;
+    margin-left: 10px;
+    /* margin-top: 10px; */
+}
+.Borrow{
+    display: none;
+    padding: 5px;
+    /* background-color: red; */
+    width: 70%;
+    float: left;
+    margin-left: 10px;
+    /* margin-top: 10px; */
+}
+.Return{
+    display: none;
+    padding: 5px;
+    /* background-color: red; */
+    width: 70%;
+    float: left;
+    margin-left: 10px;
+    /* margin-top: 10px; */
+}
+.digitalcollections{
+    display: none;
+    padding: 5px;
+    /* background-color: red; */
+    width: 70%;
+    float: left;
+    margin-left: 10px;
+    /* margin-top: 10px; */
+}
+.notification{
+    display: none;
+    padding: 5px;
+    /* background-color: red; */
+    width: 70%;
+    float: left;
+    margin-left: 10px;
+    /* margin-top: 10px; */
+}
+.profile{
+    display: none;
+    padding: 5px;
+    /* background-color: red; */
+    width: 70%;
+    float: left;
+    margin-left: 10px;
+    /* margin-top: 10px; */
+}
+.settings{
+    display: none;
+    padding: 5px;
+    /* background-color: red; */
+    width: 70%;
+    float: left;
+    margin-left: 10px;
+    /* margin-top: 10px; */
+}
