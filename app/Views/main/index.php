@@ -38,7 +38,7 @@
             <li><a href="<?php echo site_url('logout') ?>">Logout</a></li>
 
         </ul>
-        <script>    
+        <script>
             function start() {
                 document.getElementById("start").style.display = "block";
                 document.getElementById("search").style.display = "none";
@@ -137,6 +137,7 @@
                 document.getElementById("p").style.backgroundColor = "#002c5f";
                 document.getElementById("s").style.backgroundColor = "#002c5f";
             }
+
             function Notification() {
                 document.getElementById("start").style.display = "none";
                 document.getElementById("search").style.display = "none";
@@ -208,7 +209,7 @@
             </div>
             <div class="categoriesdialog" id="categoriesdialog">
                 <h1>categories</h1>
-                <div class="category-container">        
+                <div class="category-container">
 
 
                     <div class="category-item">
@@ -251,6 +252,72 @@
                         <span>Art</span>
                     </div>
                 </div>
+                 
+                
+
+                <style>
+                    div.gallery {
+                        margin: 5px;
+                        border: 1px solid #ccc;
+                        float: left;
+                        width: 180px;
+                        margin-left: 40px;
+                    }
+
+                    div.gallery:hover {
+                        border: 1px solid #777;
+                    }
+
+                    div.gallery img {
+                        width: 100%;
+                        height: 200px;
+                    }
+
+                    div.desc {
+                        padding: 15px;
+                        text-align: center;
+                    }
+                </style>
+                <hr>
+
+                <div class="category-item">
+                        <img src="<?php echo base_url('images/tech.jpg'); ?>" alt="Category 1">
+                        <span style="font-size: 25px;">Technology and computing</span>
+                    </div>
+
+            
+
+                    <div class="gallery">
+                        <a target="_blank" href="<?php echo base_url('images/book1.jpg'); ?>">
+                            <img src="<?php echo base_url('images/book1.jpg'); ?>" alt="data structure and algo" width="600" height="400">
+                        </a>
+                        <div class="desc">INTRODUCTION TO ALGORITHMS</div>
+                        <div class="desc">Thomas H. cormen</div>
+                    </div>
+
+                    <div class="gallery">
+                        <a target="_blank" href="<?php echo base_url('images/book1.jpg'); ?>">
+                            <img src="<?php echo base_url('images/book2.jpg'); ?>" alt="data structure and algo" width="600" height="400">
+                        </a>
+                        <div class="desc">INTRODUCTION TO ALGORITHMS</div>
+                        <div class="desc">Thomas H. cormen</div>
+                    </div>
+
+                    <div class="gallery">
+                        <a target="_blank" href="<?php echo base_url('images/book1.jpg'); ?>">
+                            <img src="<?php echo base_url('images/book3.jpg'); ?>" alt="data structure and algo" width="600" height="400">
+                        </a>
+                        <div class="desc">INTRODUCTION TO ALGORITHMS</div>
+                        <div class="desc">Thomas H. cormen</div>
+                    </div>
+
+                    <div class="gallery">
+                        <a target="_blank" href="<?php echo base_url('images/book1.jpg'); ?>">
+                            <img src="<?php echo base_url('images/book4.jpg'); ?>" alt="data structure and algo" width="600" height="400">
+                        </a>
+                        <div class="desc">INTRODUCTION TO ALGORITHMS</div>
+                        <div class="desc">Thomas H. cormen</div>
+                    </div>
 
 
             </div>
