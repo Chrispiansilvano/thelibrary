@@ -167,6 +167,15 @@
         button:hover {
             background-color: #005c5f;
         }
+        .booklist {
+            padding: 5px;
+            /* background-color: red; */
+            width: 70%;
+            float: left;
+            margin-left: 10px;
+            /* margin-top: 10px; */
+            display: none;
+        }
 
         .managebook {
             padding: 5px;
@@ -174,6 +183,7 @@
             width: 70%;
             float: left;
             margin-left: 10px;
+            /* display: none; */
             /* margin-top: 10px; */
         }
 
@@ -254,7 +264,9 @@
     </div>
     <div class="row">
         <ul>
+            
             <li><a class="active" href="#managebook" onclick="managebook();" id="mb">Add book</a></li>
+            <li><a  href="#booklist" onclick="booklist();" id="bl">Books list</a></li>
             <li><a href="#manageuser" onclick="manageuser();" id="um">Users management</a></li>
             <li><a href="#issuedbooks" onclick="issuedbooks();" id="ib">Issued books</a></li>
             <li><a href="#digitalcollections" onclick="digitalcollections();" id="dc">Digital Collections</a></li>
@@ -264,6 +276,27 @@
             <li><a href="<?php echo site_url('adminlogout') ?>">Logout</a></li>
         </ul>
         <script>
+            function booklist() {
+                document.getElementById("booklist").style.display = "block";
+                document.getElementById("managebook").style.display = "none";
+                document.getElementById("manageuser").style.display = "none";
+                document.getElementById("issuedbooks").style.display = "none";
+                document.getElementById("digitalcollections").style.display = "none";
+                document.getElementById("notification").style.display = "none";
+                document.getElementById("profile").style.display = "none";
+                document.getElementById("settings").style.display = "none";
+                document.getElementById("um").style.backgroundColor = "#002c5f";
+                document.getElementById("p").style.backgroundColor = "#002c5f";
+                document.getElementById("dc").style.backgroundColor = "#002c5f";
+                document.getElementById("s").style.backgroundColor = "#002c5f";
+                document.getElementById("n").style.backgroundColor = "#002c5f";
+                document.getElementById("ib").style.backgroundColor = "#002c5f";
+                document.getElementById("mb").style.backgroundColor = "#002c5f";
+                document.getElementById("bl").style.backgroundColor = "#005c5f";
+                
+
+
+            }
             function managebook() {
                 document.getElementById("managebook").style.display = "block";
                 document.getElementById("manageuser").style.display = "none";
@@ -279,6 +312,8 @@
                 document.getElementById("n").style.backgroundColor = "#002c5f";
                 document.getElementById("ib").style.backgroundColor = "#002c5f";
                 document.getElementById("mb").style.backgroundColor = "#005c5f";
+                document.getElementById("booklist").style.display = "none";
+                document.getElementById("bl").style.backgroundColor = "#002c5f";
 
             }
 
@@ -297,6 +332,8 @@
                 document.getElementById("n").style.backgroundColor = "#002c5f";
                 document.getElementById("ib").style.backgroundColor = "#002c5f";
                 document.getElementById("mb").style.backgroundColor = "#002c5f";
+                document.getElementById("booklist").style.display = "none";
+                document.getElementById("bl").style.backgroundColor = "#002c5f";
             }
 
             function issuedbooks() {
@@ -314,6 +351,8 @@
                 document.getElementById("n").style.backgroundColor = "#002c5f";
                 document.getElementById("ib").style.backgroundColor = "#005c5f";
                 document.getElementById("mb").style.backgroundColor = "#002c5f";
+                document.getElementById("booklist").style.display = "none";
+                document.getElementById("bl").style.backgroundColor = "#002c5f";
 
 
             }
@@ -333,6 +372,8 @@
                 document.getElementById("n").style.backgroundColor = "#002c5f";
                 document.getElementById("ib").style.backgroundColor = "#002c5f";
                 document.getElementById("mb").style.backgroundColor = "#002c5f";
+                document.getElementById("booklist").style.display = "none";
+                document.getElementById("bl").style.backgroundColor = "#002c5f";
 
             }
 
@@ -350,6 +391,8 @@
                 document.getElementById("dc").style.backgroundColor = "#002c5f";
                 document.getElementById("ib").style.backgroundColor = "#002c5f";
                 document.getElementById("mb").style.backgroundColor = "#002c5f";
+                document.getElementById("booklist").style.display = "none";
+                document.getElementById("bl").style.backgroundColor = "#002c5f";
 
             }
 
@@ -368,6 +411,8 @@
                 document.getElementById("ib").style.backgroundColor = "#002c5f";
                 document.getElementById("mb").style.backgroundColor = "#002c5f";
                 document.getElementById("n").style.backgroundColor = "#002c5f";
+                document.getElementById("booklist").style.display = "none";
+                document.getElementById("bl").style.backgroundColor = "#002c5f";
 
             }
 
@@ -386,8 +431,15 @@
                 document.getElementById("ib").style.backgroundColor = "#002c5f";
                 document.getElementById("mb").style.backgroundColor = "#002c5f";
                 document.getElementById("n").style.backgroundColor = "#002c5f";
+                document.getElementById("booklist").style.display = "none";
+                document.getElementById("bl").style.backgroundColor = "#002c5f";
             }
         </script>
+        <div class="booklist" id="booklist">
+            book list
+            <br>
+            <a href="<?php echo site_url('booklist'); ?>">click here to view the available books in library</a>
+        </div>
         <div class="managebook" id="managebook">
             <form action="<?php echo base_url('Addbook') ?>" method="post">
                 <div class="form-group">

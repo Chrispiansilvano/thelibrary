@@ -242,3 +242,56 @@ li a:hover:not(.active) {
     margin-left: 10px;
     /* margin-top: 10px; */
 }
+
+
+.filters{
+    float: left;
+}
+
+form {
+    /* background-color: #002c5f; */
+    /* color: white; */
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+    margin-right: 200px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  form input[type="text"],
+  form input[type="submit"] {
+    padding: 8px;
+    width: 100%;
+    /* border: none; */
+    margin-bottom: 10px;
+  }
+  
+  form input[type="submit"] {
+    /* background-color: #005c5f;
+    color: white;
+    cursor: pointer;  */
+
+     /* float: right; */
+     padding: 9px;
+     /* border: 1px solid black; */
+     /* margin-top: 8px; */
+     /* margin-right: 16px; */
+     font-size: 17px;
+     /* width: 10%; */
+     /* border-radius: 5%; */
+     color:  white;
+     background-color:  #002c5f;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #008c8f;
+  }
+
+  .link{
+    float: left;
+    margin-left: 20px;
+  }

@@ -36,4 +36,11 @@ class Bookcontroller extends BaseController
             // return redirect()->to('home');
         }
     }
+    public function booklist(){
+        $bookModel = new BookModel();
+        $data['books'] = $bookModel->getBooksList();
+
+        // return view('main/admindashboard', $data);
+        return view('main/viewbooklist', $data);
+    }
 }

@@ -55,6 +55,7 @@ $routes->group('', ['filter'=>'AuthCheck'], function($routes){
 
 use App\Controllers\Bookcontroller;
 $routes->post('Addbook', [Bookcontroller::class, 'Addbook']);
+$routes->get('booklist', [Bookcontroller::class, 'booklist']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

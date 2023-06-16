@@ -381,7 +381,34 @@
             </div>
         </div>
         <div class="search" id="search">
-            <h1>search</h1>
+            <div class="home" id="home">
+                <div>
+                    <input type="text" placeholder="Search book">
+                    <input type="button" value="search">
+                    <!-- <span>Search Icon</span> -->
+                </div>
+
+            </div>
+            <div class="filters">
+                <h3>Apply filters</h3>
+
+                <form action="search.php" method="GET">
+                    <label for="title">Title:</label>
+                    <input type="text" name="title" id="title">
+
+                    <label for="author">Author:</label>
+                    <input type="text" name="author" id="author">
+
+                    <label for="isbn">ISBN:</label>
+                    <input type="text" name="isbn" id="isbn">
+
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+           <div class="link">
+           <a href="<?php echo site_url('booklist'); ?>">click here to view the available books in library</a>
+           </div>
+            
         </div>
         <div class="Borrow" id="Borrow">
             <h1>borrow</h1>

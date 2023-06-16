@@ -6,6 +6,7 @@ use CodeIgniter\Controller;
 use App\Models\UserModel;
 use App\Models\AdminModel;
 use App\Libraries\Hash;
+use App\Models\BookModel;
 
 class Auth extends BaseController
 {
@@ -322,12 +323,15 @@ class Auth extends BaseController
             $admin_info = $adminModel->where('email', $email)->first();
             $check_password  = Hash::valid($password, $admin_info['password']);
 
+            $bookModel = new BookModel();
+            $data['book'] = $bookModel->getBooksList();
+
             if(!$check_password){
                 session()->setFlashdata('fail', 'Incorrect password');
                 return redirect()->to('adminlogin')->withInput();
             }else{
                 $admin_id = $admin_info['Id'];
-                session()->set('loggedAdmin', $admin_id);
+                session()->set('loggedAdmin', $admin_id, $data);
                 return redirect()->to('dashboard');
             }
 
