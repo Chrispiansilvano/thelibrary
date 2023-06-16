@@ -176,7 +176,8 @@
             margin-left: 10px;
             /* margin-top: 10px; */
         }
-        .manageuser{
+
+        .manageuser {
             display: none;
             padding: 5px;
             /* background-color: red; */
@@ -185,7 +186,8 @@
             margin-left: 10px;
             /* margin-top: 10px; */
         }
-        .issuedbooks{
+
+        .issuedbooks {
             display: none;
             padding: 5px;
             /* background-color: red; */
@@ -194,7 +196,8 @@
             margin-left: 10px;
             /* margin-top: 10px; */
         }
-        .digitalcollections{
+
+        .digitalcollections {
             display: none;
             padding: 5px;
             /* background-color: red; */
@@ -203,7 +206,8 @@
             margin-left: 10px;
             /* margin-top: 10px; */
         }
-        .notification{
+
+        .notification {
             display: none;
             padding: 5px;
             /* background-color: red; */
@@ -212,7 +216,8 @@
             margin-left: 10px;
             /* margin-top: 10px; */
         }
-        .profile{
+
+        .profile {
             display: none;
             padding: 5px;
             /* background-color: red; */
@@ -221,7 +226,8 @@
             margin-left: 10px;
             /* margin-top: 10px; */
         }
-        .settings{
+
+        .settings {
             display: none;
             padding: 5px;
             /* background-color: red; */
@@ -230,7 +236,6 @@
             margin-left: 10px;
             /* margin-top: 10px; */
         }
-        
     </style>
 
 </head>
@@ -259,7 +264,7 @@
             <li><a href="<?php echo site_url('adminlogout') ?>">Logout</a></li>
         </ul>
         <script>
-            function managebook(){
+            function managebook() {
                 document.getElementById("managebook").style.display = "block";
                 document.getElementById("manageuser").style.display = "none";
                 document.getElementById("issuedbooks").style.display = "none";
@@ -276,7 +281,8 @@
                 document.getElementById("mb").style.backgroundColor = "#005c5f";
 
             }
-            function manageuser(){
+
+            function manageuser() {
                 document.getElementById("managebook").style.display = "none";
                 document.getElementById("manageuser").style.display = "block";
                 document.getElementById("issuedbooks").style.display = "none";
@@ -292,7 +298,8 @@
                 document.getElementById("ib").style.backgroundColor = "#002c5f";
                 document.getElementById("mb").style.backgroundColor = "#002c5f";
             }
-            function issuedbooks(){
+
+            function issuedbooks() {
                 document.getElementById("managebook").style.display = "none";
                 document.getElementById("manageuser").style.display = "none";
                 document.getElementById("issuedbooks").style.display = "block";
@@ -308,9 +315,10 @@
                 document.getElementById("ib").style.backgroundColor = "#005c5f";
                 document.getElementById("mb").style.backgroundColor = "#002c5f";
 
-                
+
             }
-            function digitalcollections(){
+
+            function digitalcollections() {
                 document.getElementById("managebook").style.display = "none";
                 document.getElementById("manageuser").style.display = "none";
                 document.getElementById("issuedbooks").style.display = "none";
@@ -325,9 +333,10 @@
                 document.getElementById("n").style.backgroundColor = "#002c5f";
                 document.getElementById("ib").style.backgroundColor = "#002c5f";
                 document.getElementById("mb").style.backgroundColor = "#002c5f";
-                
+
             }
-            function notification(){
+
+            function notification() {
                 document.getElementById("managebook").style.display = "none";
                 document.getElementById("manageuser").style.display = "none";
                 document.getElementById("issuedbooks").style.display = "none";
@@ -341,9 +350,10 @@
                 document.getElementById("dc").style.backgroundColor = "#002c5f";
                 document.getElementById("ib").style.backgroundColor = "#002c5f";
                 document.getElementById("mb").style.backgroundColor = "#002c5f";
-                
+
             }
-            function profile(){
+
+            function profile() {
                 document.getElementById("managebook").style.display = "none";
                 document.getElementById("manageuser").style.display = "none";
                 document.getElementById("issuedbooks").style.display = "none";
@@ -358,9 +368,10 @@
                 document.getElementById("ib").style.backgroundColor = "#002c5f";
                 document.getElementById("mb").style.backgroundColor = "#002c5f";
                 document.getElementById("n").style.backgroundColor = "#002c5f";
-                
+
             }
-            function settings(){
+
+            function settings() {
                 document.getElementById("managebook").style.display = "none";
                 document.getElementById("manageuser").style.display = "none";
                 document.getElementById("issuedbooks").style.display = "none";
@@ -376,48 +387,51 @@
                 document.getElementById("mb").style.backgroundColor = "#002c5f";
                 document.getElementById("n").style.backgroundColor = "#002c5f";
             }
-            
         </script>
         <div class="managebook" id="managebook">
-            <form action="submit.php" method="post">
+            <form action="<?php echo base_url('Addbook') ?>" method="post">
                 <div class="form-group">
                     <label for="title">Title:</label>
-                    <input type="text" id="title" name="title" required>
+                    <input type="text" id="Title" name="Title" required>
                 </div>
                 <div class="form-group">
                     <label for="author">Author:</label>
-                    <input type="text" id="author" name="author" required>
+                    <input type="text" id="Author" name="Author" required>
                 </div>
                 <div class="form-group">
                     <label for="isbn">ISBN:</label>
-                    <input type="text" id="isbn" name="isbn" required>
+                    <input type="text" id="ISBN" name="ISBN" required>
                 </div>
                 <div class="form-group">
                     <label for="publisher">Publisher:</label>
                     <input type="text" id="publisher" name="publisher" required>
                 </div>
                 <div class="form-group">
-                    <label for="publication-date">Publication Date:</label>
-                    <input type="date" id="publication-date" name="publication-date" required>
+                    <label for="edition">Edition:</label>
+                    <input type="edition" id="edition" name="edition" required>
+                </div>
+                <div class="form-group">
+                    <label for="Publicationdate">Publication Date:</label>
+                    <input type="date" id="Publicationdate" name="Publicationdate" required>
                 </div>
                 <div class="form-group">
                     <label for="description">Description:</label>
                     <textarea id="description" name="description" rows="5" required></textarea>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="genre">Genre:</label>
                     <select id="genre" name="genre" required>
                         <option value="">Select Genre</option>
                         <option value="fiction">Fiction</option>
                         <option value="non-fiction">Non-Fiction</option>
                         <option value="mystery">Mystery</option>
-                        <option value="thriller">Thriller</option>
-                        <!-- Add more genre options as needed -->
-                    </select>
-                </div>
+                        <option value="thriller">Thriller</option> -->
+                <!-- Add more genre options as needed -->
+                <!-- </select> -->
+                <!-- </div> -->
                 <div class="form-group">
-                    <label for="cover-image">Cover Image:</label>
-                    <input type="file" id="cover-image" name="cover-image" accept="image/*" required>
+                    <label for="coverimage">Cover Image:</label>
+                    <input type="file" id="coverimage" name="coverimage" accept="image/*" required>
                 </div>
                 <!-- <div class="form-group">
                     <label for="price">Price:</label>
@@ -427,7 +441,7 @@
                     <label for="availability">Availability:</label>
                     <select id="availability" name="availability" required>
                         <option value="">Select Availability</option>
-                        <option value="in-stock">In Stock</option>
+                        <option value="in-stock">In stock</option>
                         <option value="out-of-stock">Out of Stock</option>
                         <option value="preorder">Preorder</option>
                     </select>
