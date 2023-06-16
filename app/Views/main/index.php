@@ -23,7 +23,10 @@
             <i class="material-icons md-18">person</i>
         </div>
         <div class="logo">
-            <img src="<?php echo base_url('images/logo2.jpg'); ?>" alt="logo" height="30px">
+            <img src="<?php echo base_url('images/logo4.jpg'); ?>" alt="logo" height="50px">
+            <div class="head">
+                <p>CampusLibrary</p>
+            </div>  
         </div>
     </div>
     <div class="row">
@@ -291,6 +294,7 @@
                         align-items: center;
                         display: flex;
                     }
+
                 </style>
                 <hr>
 
@@ -378,6 +382,48 @@
                     <div class="right-arrow"><i class="fas fa-arrow-right"></i></div>
 
                 </div>
+                <hr>
+                <div class="category-item" style="margin-top: 30px;">
+                    <img src="<?php echo base_url('images/bc.jpg'); ?>" alt="Category 2">
+                    <span style="font-size: 25px;">Business and carriers</span>
+                </div>
+                <div class="tech">
+
+
+                    <div class="gallery">
+                        <a target="_blank" href="<?php echo base_url('images/book5.jpg'); ?>">
+                            <img src="<?php echo base_url('images/book10.jpg'); ?>" alt="data structure and algo" width="600" height="400">
+                        </a>
+                        <div class="desc">ADVANVED SOCIAL MEDIA MARKETING</div>
+                        <div class="desc">Tom Funk</div>
+                    </div>
+
+                    <div class="gallery">
+                        <a target="_blank" href="<?php echo base_url('images/book11.jpg'); ?>">
+                            <img src="<?php echo base_url('images/book11.jpg'); ?>" alt="data structure and algo" width="600" height="400">
+                        </a>
+                        <div class="desc">FINANCE AND ACCOUNTING</div>
+                        <div class="desc">Cheng-Few Lee</div>
+                    </div>
+
+                    <div class="gallery">
+                        <a target="_blank" href="<?php echo base_url('images/book12.jpg'); ?>">
+                            <img src="<?php echo base_url('images/book12.jpg'); ?>" alt="ESSENTIALS OF ANATOMY AND PHSYIOLOGY" width="600" height="400">
+                        </a>
+                        <div class="desc">ACCOUNTING PRINCIPLES</div>
+                        <div class="desc">Jerry Weygandt </div>
+                    </div>
+
+                    <div class="gallery">
+                        <a target="_blank" href="<?php echo base_url('images/book13.jpg'); ?>">
+                            <img src="<?php echo base_url('images/book13.jpg'); ?>" alt="data structure and algo" width="600" height="400">
+                        </a>
+                        <div class="desc">ESSENTIALS OF SUPPLY CHAIN MANAGEMENT</div>
+                        <div class="desc">Hokey Min</div>
+                    </div>
+                    <div class="right-arrow"><i class="fas fa-arrow-right"></i></div>
+
+                </div>
             </div>
         </div>
         <div class="search" id="search">
@@ -405,13 +451,129 @@
                     <input type="submit" value="Search">
                 </form>
             </div>
-           <div class="link">
-           <a href="<?php echo site_url('booklist'); ?>">click here to view the available books in library</a>
-           </div>
-            
+            <div class="link">
+                <a href="<?php echo site_url('booklist'); ?>">click here to view the available books in library</a>
+            </div>
+
         </div>
         <div class="Borrow" id="Borrow">
-            <h1>borrow</h1>
+            <style>
+                form {
+                    width: 500px;
+                    margin: 0 auto;
+                    background-color: #f2f2f2;
+                    padding: 20px;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                }
+
+                h2 {
+                    text-align: center;
+                    color: #002c5f;
+                    margin-bottom: 20px;
+                }
+
+                .form-group {
+                    margin-bottom: 20px;
+                }
+
+                label {
+                    display: block;
+                    font-weight: bold;
+                }
+
+                input[type="text"],
+                input[type="email"],
+                input[type="date"] {
+                    width: 100%;
+                    padding: 8px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                }
+
+                .btn-container {
+                    text-align: center;
+                }
+
+                input[type="submit"] {
+                    background-color: #002c5f;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    border-radius: 4px;
+                }
+
+                input[type="submit"]:hover {
+                    background-color: #005c5f;
+                }
+            </style>
+            
+
+            
+                <form action="borrow.php" method="POST">
+                    <h2>Borrow Book</h2>
+
+                    <!-- Student Information -->
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="id">ID:</label>
+                        <input type="text" name="id" id="id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="course">Course:</label>
+                        <input type="text" name="course" id="course" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone">Telephone:</label>
+                        <input type="text" name="telephone" id="telephone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <input type="text" name="address" id="address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+
+                    <!-- Book Information -->
+                    <div class="form-group">
+                        <label for="book-title">Book Title:</label>
+                        <input type="text" name="book-title" id="book-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Author:</label>
+                        <input type="text" name="author" id="author" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="isbn">ISBN:</label>
+                        <input type="text" name="isbn" id="isbn" required>
+                    </div>
+
+                    <!-- Time of Return -->
+                    <div class="form-group">
+                        <label for="issued-date">Issued Date:</label>
+                        <input type="date" name="issued-date" id="issued-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Duration (in days):</label>
+                        <input type="text" name="duration" id="duration" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="return-date">Return Date:</label>
+                        <input type="date" name="return-date" id="return-date" required>
+                    </div>
+
+                    <div class="btn-container">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
         </div>
         <div class="Return" id="Return">
             <h1>return</h1>

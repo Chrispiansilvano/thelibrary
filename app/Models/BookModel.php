@@ -13,7 +13,7 @@ class BookModel extends Model
 
     public function getBooksList(){
         $db = \Config\Database::connect();
-        $query = $db->query('select Title, Author, ISBN, publisher, edition, Publicationdate, Description, BookCover, availability, Quantity from books');
+        $query = $db->query('select Id, Title, Author, ISBN, publisher, edition, Publicationdate, Description, BookCover, availability, Quantity from books');
         $result = $query->getResult();
         if(count($result)>0){
             return $result;

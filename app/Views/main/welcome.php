@@ -73,7 +73,7 @@
 <body>
     <div class="container">
         <a href="#" class="about">About</a>
-        <h1>Welcome to Optimus Library</h1>
+        <h1>Welcome to Campus Library</h1>
         <!-- <p>We're glad to have you!</p> -->
         <p>Access resources and enjoy efficient management features. </p>
         <p>Join us for an enhanced library experience.</p>

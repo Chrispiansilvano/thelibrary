@@ -65,7 +65,7 @@
         </tr>
         <?php foreach($books as $book):?>
         <tr> 
-            <td>1</td>
+            <td><?= $book->Id; ?></td>
             <td><?= $book->Title; ?></td>
             <td><?= $book->Author; ?></td>
             <td><?= $book->ISBN; ?></td>

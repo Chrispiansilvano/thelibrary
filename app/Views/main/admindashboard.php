@@ -34,7 +34,29 @@
 
         .logo {
             margin-left: 20px;
+            border-radius: 4px;
 
+
+
+        }
+
+        .logo img {
+            /* width: 100%; */
+            /* height: 150px; */
+            float: left;
+            margin-right: 20px;
+        }
+
+        .head {
+            float: left;
+            font-size: 20px;
+        }
+
+        /* clear floats after the logo */
+        .logo::after {
+            content: "";
+            display: table;
+            clear: both;
         }
 
         .toptext {
@@ -75,7 +97,7 @@
             /* border-radius: -10px; */
             height: auto;
             /* Allow the height to adjust based on content */
-            min-height: 160vh;
+            min-height: 200vh;
             /* Set a minimum height of 100% viewport height */
         }
 
@@ -167,6 +189,7 @@
         button:hover {
             background-color: #005c5f;
         }
+
         .booklist {
             padding: 5px;
             /* background-color: red; */
@@ -246,6 +269,43 @@
             margin-left: 10px;
             /* margin-top: 10px; */
         }
+
+        .notificationdialog {
+            /* background-color: #002c5f; */
+            /* color: white; */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            margin-top: 30px;
+        }
+
+        .notificationdialog h3 {
+            font-size: 18px;
+            margin-top: 0;
+        }
+
+        .notificationdialog p {
+            margin-bottom: 10px;
+        }
+
+        .notificationdialog .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .notificationdialog button {
+            background-color: #005c5f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .notificationdialog button:hover {
+            background-color: #008c8f;
+        }
     </style>
 
 </head>
@@ -259,14 +319,17 @@
             <i class="material-icons md-18">person</i>
         </div>
         <div class="logo">
-            <img src="<?php echo base_url('images/logo2.jpg'); ?>" alt="logo" height="30px">
+            <img src="<?php echo base_url('images/logo4.jpg'); ?>" alt="logo" height="50px">
+            <div class="head">
+                <p>CampusLibrary</p>
+            </div>
         </div>
     </div>
     <div class="row">
         <ul>
-            
+
             <li><a class="active" href="#managebook" onclick="managebook();" id="mb">Add book</a></li>
-            <li><a  href="#booklist" onclick="booklist();" id="bl">Books list</a></li>
+            <li><a href="#booklist" onclick="booklist();" id="bl">Books list</a></li>
             <li><a href="#manageuser" onclick="manageuser();" id="um">Users management</a></li>
             <li><a href="#issuedbooks" onclick="issuedbooks();" id="ib">Issued books</a></li>
             <li><a href="#digitalcollections" onclick="digitalcollections();" id="dc">Digital Collections</a></li>
@@ -293,10 +356,11 @@
                 document.getElementById("ib").style.backgroundColor = "#002c5f";
                 document.getElementById("mb").style.backgroundColor = "#002c5f";
                 document.getElementById("bl").style.backgroundColor = "#005c5f";
-                
+
 
 
             }
+
             function managebook() {
                 document.getElementById("managebook").style.display = "block";
                 document.getElementById("manageuser").style.display = "none";
@@ -523,13 +587,41 @@
             <h1>digital collections</h1>
         </div>
         <div class="notification" id="notification">
-            <h1>notifications</h1>
+            <p style="font-size: 25px;">Notifications</p>
+            <div class="notificationdialog">
+                <h3>New Borrow Request</h3>
+                <p>A user has requested to borrow a book.</p>
+                <p><strong>Book Title:</strong> PHP cookbook</p>
+                <p><strong>User:</strong> Maua </p>
+                <button>View Request</button>
+            </div>
+            <div class="notificationdialog">
+                <h3>New Borrow Request</h3>
+                <p>A user has requested to borrow a book.</p>
+                <p><strong>Book Title:</strong> To Kill a Mockingbird</p>
+                <p><strong>User:</strong> Joseph Gasper</p>
+                <button>View Request</button>
+            </div>
+            <div class="notificationdialog">
+                <h3>New Borrow Request</h3>
+                <p>A user has requested to borrow a book.</p>
+                <p><strong>Book Title:</strong> Introduction to algorithms</p>
+                <p><strong>User:</strong> Chrispian silvano</p>
+                <button>View Request</button>
+            </div>
+            <div class="notificationdialog">
+                <h3>New Borrow Request</h3>
+                <p>A user has requested to borrow a book.</p>
+                <p><strong>Book Title:</strong> A brief history of time</p>
+                <p><strong>User:</strong> Erick Nzogera</p>
+                <button>View Request</button>
+            </div>
         </div>
         <div class="profile" id="profile">
-            <h1>profile</h1>
+            <p style="font-size: 25px;">Profile</p>
         </div>
         <div class="settings" id="settings">
-            <h1>settings</h1>
+            <p style="font-size: 25px;">Settings</p>
         </div>
     </div>
     <div class="footer">
